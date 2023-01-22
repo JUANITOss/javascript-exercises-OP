@@ -1,15 +1,16 @@
 const reverseString = function(string) {
-    
-    let revString = "";
-    let stringCopy = string;
 
-    if (string === revString){
+    if (string === ""){
         return string;
     }
     
-    for (let i = 0; i < string.length; i++) {
-        let revString = revString.concat(stringCopy.pop()); 
+    let revString = "";
+
+    for (let i = string.length-1; i > -1; i--) {
+        revString = revString.concat("",string.charAt(i)); 
     }
+
+    console.log(revString);
 
     return revString;
 };
